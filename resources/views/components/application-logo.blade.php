@@ -1,0 +1,1 @@
+<img height="20%" width="20%" style="    margin-left: 38%;" src="{{asset('logo/logo.png')}}" alt="">
