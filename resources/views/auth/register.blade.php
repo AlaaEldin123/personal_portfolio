@@ -93,7 +93,7 @@
             <a href="{{ route('login') }}" class="text-muted">Already have account?</a>
         </div>
     </div>
-</form>
+</form>     
                             <!-- end form -->
                         </div>
                     </div>
