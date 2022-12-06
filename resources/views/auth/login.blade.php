@@ -9,7 +9,7 @@
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesdesign" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{ asset('backend/assets/images/favicon.ico') }}">
+        <link rel="shortcut icon" href="{{ asset('logo/logo.png') }}">
 
         <!-- Bootstrap Css -->
         <link href="{{ asset('backend/assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
@@ -31,9 +31,9 @@
 
                         <div class="text-center mt-4">
                             <div class="mb-3">
-                               <a href="index.html" class="auth-logo">
-                                    <img src="{{ asset('/logo/logo.png') }}" height="100" class="logo-dark mx-auto" alt="">
-                                    <img src="{{ asset('/logo/logo.png') }}" height="100" class="logo-light mx-auto" alt="">
+                                <a href="index.html" class="auth-logo">
+                                    <img src="{{ asset('logo/logo.png') }}" height="70" width="30%" class="logo-dark mx-auto" alt="">
+                                    <img src="{{ asset('logo/logo.png') }}" height="70" width="30$" class="logo-light mx-auto" alt="">
                                 </a>
                             </div>
                         </div>
@@ -48,7 +48,7 @@
 
         <div class="form-group mb-3 row">
             <div class="col-12">
-                <input class="form-control" id="email" name="email" type="text" required="" placeholder="Email">
+                <input class="form-control" id="username" name="username" type="text" required="" placeholder="Username">
             </div>
         </div>
 
@@ -104,28 +104,7 @@
 
          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-<script>
- @if(Session::has('message'))
- var type = "{{ Session::get('alert-type','info') }}"
- switch(type){
-    case 'info':
-    toastr.info(" {{ Session::get('message') }} ");
-    break;
 
-    case 'success':
-    toastr.success(" {{ Session::get('message') }} ");
-    break;
-
-    case 'warning':
-    toastr.warning(" {{ Session::get('message') }} ");
-    break;
-
-    case 'error':
-    toastr.error(" {{ Session::get('message') }} ");
-    break; 
- }
- @endif 
-</script>
 
     </body>
 </html>
