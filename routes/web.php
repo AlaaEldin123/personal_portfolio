@@ -74,4 +74,10 @@ Route::controller(AboutController::class)->group(function () {
 //  Home Slider Route 
 Route::controller(PortfolioController::class)->group(function () {
     Route::get('/all/portfolio', 'AllPortfolio')->name('all.portfolio');
+    Route::get('/add/portfolio', 'AddPortfolio')->name('add.portfolio');
+    Route::get('/add/portfolio', 'AddPortfolio')->name('store.protfolio
+    ');
+
+
+
 });
