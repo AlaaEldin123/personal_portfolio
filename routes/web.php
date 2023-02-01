@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\HomeSliderController;
+use App\Http\Controllers\Home\PortfolioController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -66,4 +67,11 @@ Route::controller(AboutController::class)->group(function () {
     Route::get('/delete/multi/image/{id}', 'DeleteMultiImage')->name('delete.multi.image');
 
    
+});
+
+
+
+//  Home Slider Route 
+Route::controller(PortfolioController::class)->group(function () {
+    Route::get('/all/portfolio', 'AllPortfolio')->name('all.portfolio');
 });
