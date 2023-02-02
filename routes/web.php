@@ -56,6 +56,8 @@ Route::middleware('auth' )->group(function () {
 
 require __DIR__.'/auth.php';
 
+Route::middleware(['auth'])->group(function () {
+
  // Admin All Route 
 Route::controller(AdminController::class)->group(function () {
     
@@ -67,7 +69,7 @@ Route::controller(AdminController::class)->group(function () {
     Route::post('/update/passoword', 'UpdatePassword')->name('update.password');
     
 });
-
+});
 //  Home Slider Route 
 Route::controller(HomeSliderController::class)->group(function () {
     Route::get('/home/slide', 'HomeSlider')->name('home.slide');
