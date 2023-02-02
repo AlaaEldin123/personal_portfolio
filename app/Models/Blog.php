@@ -11,3 +11,4 @@ class Blog extends Model
     protected $guarded = [];
 
 }
+w

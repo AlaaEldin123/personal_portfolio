@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\BlogCategoryController;
+use App\Http\Controllers\Home\BlogController;
 use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\PortfolioController;
 use App\Http\Controllers\ProfileController;
@@ -101,4 +102,13 @@ Route::controller(BlogCategoryController::class)->group(function () {
     
 
     
+});
+
+
+
+ // Blog All Route 
+ Route::controller(BlogController::class)->group(function () {
+    Route::get('/all/blog', 'AllBlog')->name('all.blog');
+ 
+     
 });
