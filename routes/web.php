@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DemoController;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\BlogController;
@@ -23,9 +24,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
+// Route::get('/', function () {
+//     return view('frontend.index');
+// });
+
+
+Route::controller(DemoController::class)->group(function () {    
+    Route::get('/', 'HomeMain')->name('home');
+    
 });
+
+
+
+
+
+
+
+
+
+
 
 Route::get('/dashboard', function () {
     return view('admin.index');

@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class DemoController extends Controller
 {
-    function index()
+    function HomeMain()
     {
-        return view('index');
+        return view('frontend.index');
     }
 }
