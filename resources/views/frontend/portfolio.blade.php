@@ -2,7 +2,7 @@
 @section('main')
 
 @section('title')
-PortFolio | EasyLearning Website
+PortFolio | Alaa Eldin Website
 @endsection
 
   <main>

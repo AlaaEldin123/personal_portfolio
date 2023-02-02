@@ -2,7 +2,9 @@
    @extends('frontend.main_master')
    @section('main')
 
-
+   @section('title')
+   About | Alaa Eldn Website
+   @endsection
    @php
                $homeabout =App\Models\About::find(1);
 

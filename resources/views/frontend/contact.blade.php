@@ -2,7 +2,7 @@
 @section('main')
 
 @section('title')
-Contact | Alaa Eldin
+Contact | Alaa Eldin Website
 @endsection
 
  <main>
