@@ -2,9 +2,11 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\AboutController;
+use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\PortfolioController;
 use App\Http\Controllers\ProfileController;
+use App\Models\BlogCategory;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -71,7 +73,7 @@ Route::controller(AboutController::class)->group(function () {
 
 
 
-//  Home Slider Route 
+//  portfolio  Route 
 Route::controller(PortfolioController::class)->group(function () {
     Route::get('/all/portfolio', 'AllPortfolio')->name('all.portfolio');
     Route::get('/add/portfolio', 'AddPortfolio')->name('add.portfolio');
@@ -83,4 +85,13 @@ Route::controller(PortfolioController::class)->group(function () {
     Route::get('/portfolio', 'HomePortfolio')->name('home.portfolio');
 
 
+});
+
+
+
+
+//  Blog Category Route 
+Route::controller(BlogCategoryController::class)->group(function () {
+    Route::get('/all/blog/category', 'AllBlogCategory')->name('all.blog.category');
+    
 });
