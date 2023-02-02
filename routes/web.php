@@ -111,6 +111,6 @@ Route::controller(BlogCategoryController::class)->group(function () {
     Route::get('/all/blog', 'AllBlog')->name('all.blog');
     Route::get('/add/blog', 'AddBlog')->name('add.blog');
     Route::post('/store/blog', 'StoreBlog')->name('store.blog');
-
+    Route::get('/edit/blog/{id}', 'EditBlog')->name('edit.blog');
      
 });
