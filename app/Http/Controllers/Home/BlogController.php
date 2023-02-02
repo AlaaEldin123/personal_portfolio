@@ -146,5 +146,14 @@ public function DeleteBlog($id){
     } // End Method 
 
 
+    public function HomeBlog(){
 
+        $categories = BlogCategory::orderBy('blog_category','ASC')->get();
+        $allblogs = Blog::latest()->get();
+        return view('frontend.blog',compact('allblogs','categories'));
+
+     } // End Method 
+
+ 
+     
 }
