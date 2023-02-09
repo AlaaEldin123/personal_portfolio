@@ -12,7 +12,7 @@
 
             <h4 class="card-title">Add Blog Category Page </h4> <br><br>
             
-            <form method="post" id="myForm" action="{{ route('store.blog.category') }}" >
+            <form method="post"  id="myForm" action="{{ route('store.blog.category') }}" >
                 @csrf
 
                
@@ -41,6 +41,36 @@
 
 </div>
 </div>
+
+
+<script type="text/javascript">
+    $(document).ready(function (){
+        $('#myForm').validate({
+            rules: {
+                blog_category: {
+                    required : true,
+                }, 
+            },
+            messages :{
+                blog_category: {
+                    required : 'Please Enter Blog Category',
+                },
+            },
+            errorElement : 'span', 
+            errorPlacement: function (error,element) {
+                error.addClass('invalid-feedback');
+                element.closest('.form-group').append(error);
+            },
+            highlight : function(element, errorClass, validClass){
+                $(element).addClass('is-invalid');
+            },
+            unhighlight : function(element, errorClass, validClass){
+                $(element).removeClass('is-invalid');
+            },
+        });
+    });
+    
+</script>
 
 
 
